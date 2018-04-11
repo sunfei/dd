@@ -15,9 +15,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.source       = { :git => "git@techgit.meitu.com:bj/ImageAdviser.git", :branch => 'feature/sf-cocoapods' }
-  s.source_files  = "ImageAdviserCore/**/*.{swift}", "ImageAdviser-iOS/**/*.{swift,h,m}"
+  s.source_files  = "ImageAdviserCore/**/*.{swift,mlmodel}", "ImageAdviser-iOS/**/*.{swift,h,m}"
 # s.vendored_frameworks = "bin/Release-universal/ImageAdviser_iOS.framework"
- s.pod_target_xcconfig = { "SWIFT_VERSION" => "4.0" }
+ s.pod_target_xcconfig = { "SWIFT_VERSION" => "4.1" }
+  s.resources = ['ImageAdviserCore/**/*.json']
   # s.swift_version = '4.1'
   s.static_framework = true
 end
